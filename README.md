@@ -20,8 +20,11 @@ offline, and the latest digest is verified live, in your browser, at
 |---|---|
 | `feed/YYYY/MM/DD/refusal-digest-<UTC-stamp>.json` | one run's signed digest — **immutable once published** |
 | `feed/YYYY/MM/DD/refusal-digest-<UTC-stamp>.pub.pem` | that run's Ed25519 public key (PKIX PEM) — each run signs with a fresh ephemeral keypair, and the public half is published beside the digest |
-| `latest/refusal-digest.json` + `.pub.pem` | a convenience pointer to the newest run — the only files here that change |
+| `latest/refusal-digest.json` + `.pub.pem` | a convenience pointer to the newest run |
+| `latest/badge.json` + `latest/feed.xml` | non-normative legibility artifacts regenerated per run from the index — a [shields endpoint](https://shields.io/badges/endpoint-badge) badge and an RSS feed of recent runs (see below) |
 | `index.ndjson` | one JSON line per run, append-only: `completed_at`, `digest_hash`, `seed`, `spec_version`, `attempted`, `refused`, `all_refused`, `path`, `run_id` |
+
+Only the files under `latest/` ever change; everything else is append-only.
 
 **Append-only discipline:** published `feed/` entries and existing
 `index.ndjson` lines are never rewritten. The git history of this repository
@@ -38,6 +41,25 @@ run's seed is `SHA-256` of the previous published digest's `digest_hash`
 sequence of digests is therefore self-linking — tampering with any published
 digest breaks every later seed. A run that cannot reach the feed starts a
 new chain with a random seed; that restart is visible in `index.ndjson`.
+
+## Embed the record
+
+The streak is embeddable anywhere markdown or a feed reader goes. Both
+artifacts are derived from `index.ndjson` on every publish — they are
+conveniences, not the record; the record is the digests, keys, and index.
+
+Badge (live, honest in every state — a run in which a guard did not fire
+turns it red):
+
+```markdown
+![standing refusals](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fjsabes24%2Fcss-refusal-feed%2Fmain%2Flatest%2Fbadge.json)
+```
+
+RSS (newest 20 runs, one item per published digest):
+
+```
+https://raw.githubusercontent.com/jsabes24/css-refusal-feed/main/latest/feed.xml
+```
 
 ## Verify a digest yourself
 

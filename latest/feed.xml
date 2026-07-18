@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Standing refusals — Continuity Labs</title>
+    <link>https://github.com/jsabes24/css-refusal-feed</link>
+    <description>Every day an automated probe suite attacks the Constitutional Stewardship engine with the transitions it must refuse, and publishes the signed, independently verifiable refusal digest here — including any run in which a guard did not fire.</description>
+    <item>
+      <title>2026-07-18 — 4 attacks attempted, 4 refused</title>
+      <link>https://github.com/jsabes24/css-refusal-feed/blob/main/feed/2026/07/18/refusal-digest-20260718T100504Z.json</link>
+      <guid isPermaLink="false">b2aeb569c8f1b43876ba5ee62490f3f9831639dcd4b3c474026588924b89677c</guid>
+      <pubDate>Sat, 18 Jul 2026 10:05:04 +0000</pubDate>
+      <description>every attack refused; seed 78ed89a3dff15c88…; spec v0.2; digest b2aeb569c8f1b438… — verify it offline with the .pub.pem beside it, or live at https://continuitylaboratories.com/refusal</description>
+    </item>
+    <item>
+      <title>2026-07-17 — 4 attacks attempted, 4 refused</title>
+      <link>https://github.com/jsabes24/css-refusal-feed/blob/main/feed/2026/07/17/refusal-digest-20260717T085756Z.json</link>
+      <guid isPermaLink="false">f048f12983291b6769304e23c250d73aa04686a38a34f7724ad9b5c9ca07dbca</guid>
+      <pubDate>Fri, 17 Jul 2026 08:57:56 +0000</pubDate>
+      <description>every attack refused; seed cf8447a001fa457c…; spec v0.2; digest f048f12983291b67… — verify it offline with the .pub.pem beside it, or live at https://continuitylaboratories.com/refusal</description>
+    </item>
+  </channel>
+</rss>
