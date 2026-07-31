@@ -5,6 +5,13 @@
     <link>https://github.com/jsabes24/css-refusal-feed</link>
     <description>Every day an automated probe suite attacks the Constitutional Stewardship engine with the transitions it must refuse, and publishes the signed, independently verifiable refusal digest here — including any run in which a guard did not fire.</description>
     <item>
+      <title>2026-07-31 — 4 attacks attempted, 4 refused</title>
+      <link>https://github.com/jsabes24/css-refusal-feed/blob/main/feed/2026/07/31/refusal-digest-20260731T081111Z.json</link>
+      <guid isPermaLink="false">5d95d5f27cb620df22f649ad1092dcc5fab5a8f82d4e41a88fed2f0fb2afaf96</guid>
+      <pubDate>Fri, 31 Jul 2026 08:11:11 +0000</pubDate>
+      <description>every attack refused; seed f412468dafe5196c…; spec v0.2; digest 5d95d5f27cb620df… — verify it offline with the .pub.pem beside it, or live at https://continuitylaboratories.com/refusal</description>
+    </item>
+    <item>
       <title>2026-07-30 — 4 attacks attempted, 4 refused</title>
       <link>https://github.com/jsabes24/css-refusal-feed/blob/main/feed/2026/07/30/refusal-digest-20260730T074358Z.json</link>
       <guid isPermaLink="false">d545d44e529eae106c6a81b8231de27a8a09763904a77aa4b8259444cdd1d55d</guid>
