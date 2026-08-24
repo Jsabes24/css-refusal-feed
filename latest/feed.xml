@@ -5,6 +5,13 @@
     <link>https://github.com/jsabes24/css-refusal-feed</link>
     <description>Every day an automated probe suite attacks the Constitutional Stewardship engine with the transitions it must refuse, and publishes the signed, independently verifiable refusal digest here — including any run in which a guard did not fire.</description>
     <item>
+      <title>2026-08-24 — 4 attacks attempted, 4 refused</title>
+      <link>https://github.com/jsabes24/css-refusal-feed/blob/main/feed/2026/08/24/refusal-digest-20260824T055652Z.json</link>
+      <guid isPermaLink="false">3919c99e0fb9b3bb982feaeec9410d0462b933ff47d8d0dbf32c13e97906332b</guid>
+      <pubDate>Mon, 24 Aug 2026 05:56:52 +0000</pubDate>
+      <description>every attack refused; seed d22559984aa7002b…; spec v0.2; digest 3919c99e0fb9b3bb… — verify it offline with the .pub.pem beside it, or live at https://continuitylaboratories.com/refusal</description>
+    </item>
+    <item>
       <title>2026-08-23 — 4 attacks attempted, 4 refused</title>
       <link>https://github.com/jsabes24/css-refusal-feed/blob/main/feed/2026/08/23/refusal-digest-20260823T054908Z.json</link>
       <guid isPermaLink="false">f73d632b18ec263d674d911865ca374ca309ca14ed99fdbc5dfcd52aee79d3c4</guid>
@@ -136,13 +143,6 @@
       <guid isPermaLink="false">59885247b0d8a28ecaa11c9dd077d59fcb8b5beacbff9247a305adeb57c2b41b</guid>
       <pubDate>Wed, 05 Aug 2026 07:58:11 +0000</pubDate>
       <description>every attack refused; seed c904610119477b9e…; spec v0.2; digest 59885247b0d8a28e… — verify it offline with the .pub.pem beside it, or live at https://continuitylaboratories.com/refusal</description>
-    </item>
-    <item>
-      <title>2026-08-04 — 4 attacks attempted, 4 refused</title>
-      <link>https://github.com/jsabes24/css-refusal-feed/blob/main/feed/2026/08/04/refusal-digest-20260804T075703Z.json</link>
-      <guid isPermaLink="false">6cd8531b59314290e5b74002eb37c06cf17f72bcc8f1a0b3f736c205c9854ed1</guid>
-      <pubDate>Tue, 04 Aug 2026 07:57:03 +0000</pubDate>
-      <description>every attack refused; seed 4567c66308711f0c…; spec v0.2; digest 6cd8531b59314290… — verify it offline with the .pub.pem beside it, or live at https://continuitylaboratories.com/refusal</description>
     </item>
   </channel>
 </rss>
