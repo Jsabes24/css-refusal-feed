@@ -1,0 +1,146 @@
+{
+  "issuer": {
+    "id": "urn:cios:registry"
+  },
+  "probes": [
+    {
+      "attack": "declared software presents a VALID age proof and claims the adult audience",
+      "forbidden_event_types": [
+        "audience.admitted"
+      ],
+      "guard": "cios.substrate.entitlement.refuse_impersonation",
+      "id": "substrate-agent-holds-adult",
+      "outcome": "refused",
+      "refusal_ground": "declared software may not hold the adult audience \u2014 docs/02 \u00a735: no agent may speak as the principal. The agent audience exists and is declared; use it."
+    },
+    {
+      "attack": "a key that declared no authorship presents a valid age proof",
+      "forbidden_event_types": [
+        "audience.admitted"
+      ],
+      "guard": "cios.substrate.entitlement.refuse_impersonation",
+      "id": "substrate-undeclared-holds-adult",
+      "outcome": "refused",
+      "refusal_ground": "this key has declared no authorship, so it may not hold the adult audience. Undeclared is not a synonym for agent, and the law applies to both."
+    },
+    {
+      "attack": "an 11-year-old attempts to produce a proof of age >= 18",
+      "forbidden_event_types": [
+        "entitlement.age_proved"
+      ],
+      "guard": "cios.zk.statements.prove_at_least",
+      "id": "substrate-underage-proves-adult",
+      "outcome": "refused",
+      "refusal_ground": "cannot prove age \u2265 18.0: the committed value is below 18.0, or the difference exceeds 2**8; nothing to prove (value is not in [0, 2**8); nothing to prove)"
+    },
+    {
+      "attack": "an adult audience is claimed with no age proof at all",
+      "forbidden_event_types": [
+        "audience.admitted"
+      ],
+      "guard": "cios.substrate.entitlement.admit",
+      "id": "substrate-adult-without-proof",
+      "outcome": "refused",
+      "refusal_ground": "adult requires a zero-knowledge proof of age \u2265 18; none was supplied or it did not verify"
+    },
+    {
+      "attack": "the adult side attempts to reach the child space",
+      "forbidden_event_types": [
+        "reach.granted"
+      ],
+      "guard": "cios.substrate.audience.crossing",
+      "id": "substrate-adult-reaches-child",
+      "outcome": "refused",
+      "refusal_ground": "adult may not reach child: docs/00-human-source:531 \u2014 that separation is the requirement"
+    },
+    {
+      "attack": "the child side attempts to reach an adult principal",
+      "forbidden_event_types": [
+        "reach.granted"
+      ],
+      "guard": "cios.substrate.audience.crossing",
+      "id": "substrate-child-reaches-adult",
+      "outcome": "refused",
+      "refusal_ground": "child may not reach adult: docs/00-human-source:531 \u2014 that separation is the requirement"
+    },
+    {
+      "attack": "a child domain is constructed at docs/02 \u00a730 risk 3",
+      "forbidden_event_types": [
+        "consent.escalated"
+      ],
+      "guard": "cios.substrate.audience.AudienceProfile",
+      "id": "substrate-child-raises-risk-cap",
+      "outcome": "refused",
+      "refusal_ground": "a child domain is capped at risk 1; docs/00-human-source:528 \u2014 'the safety parameters would be dramatically different for a kid'"
+    },
+    {
+      "attack": "a child presents a guardian grant signed by a key nobody registered",
+      "forbidden_event_types": [
+        "audience.admitted"
+      ],
+      "guard": "cios.substrate.entitlement.check_grant",
+      "id": "substrate-grant-from-unknown-key",
+      "outcome": "refused",
+      "refusal_ground": "a child is admitted by a guardian's signed grant, never by proving anything about itself; no valid grant was supplied"
+    },
+    {
+      "attack": "a machine whose measurements diverge from its plan attests anyway",
+      "forbidden_event_types": [
+        "boot.attested"
+      ],
+      "guard": "cios.substrate.attest.verify",
+      "id": "substrate-tampered-boot-attests",
+      "outcome": "refused",
+      "refusal_ground": "boot state does not fold to the plan"
+    },
+    {
+      "attack": "an attestation produced inside a drill is presented as a production boot",
+      "forbidden_event_types": [
+        "boot.attested"
+      ],
+      "guard": "cios.substrate.attest.verify",
+      "id": "substrate-rehearsal-presented-as-real",
+      "outcome": "refused",
+      "refusal_ground": "rehearsal mismatch: attestation says drill-probe, caller expected none; a rehearsed boot is not a boot"
+    },
+    {
+      "attack": "a quarantined seat runs a command that needs filesystem reach",
+      "forbidden_event_types": [
+        "reach.granted"
+      ],
+      "guard": "cios.substrate.reach.ReachPolicy.permits",
+      "id": "substrate-quarantined-domain-acts",
+      "outcome": "refused",
+      "refusal_ground": "node/verifier may not filesystem / \u2014 refused before running"
+    },
+    {
+      "attack": "reach is revoked on a quarantine the governance gate declined",
+      "forbidden_event_types": [
+        "reach.revoked"
+      ],
+      "guard": "cios.substrate.reach.from_quarantine",
+      "id": "substrate-gate-refused-quarantine-still-revokes",
+      "outcome": "refused",
+      "refusal_ground": "the gate refused this quarantine of 'node/verifier'; the attempt is journaled and reach is unchanged. adr/0049: the monitor attempts, the gate decides"
+    }
+  ],
+  "proof": {
+    "created": "2026-09-22T22:22:03.726513Z",
+    "digest_hash": "166f76c69253416f4b02e93f680f2cb59227666098d77721a76f5d46fc212285",
+    "signature": "ed25519:KWR1XjiRgyQw0baP0G8Ns8JuIqDhYx5J8anuOnbytCM:rlthama4y_VdIExwiOfAk28U9Spwg6Y3ORCNT_4gnAW98GAT82ZjS9kt_A8bWH9hed1PbQDB53sBt0uN4NIFBg",
+    "type": "CSSEd25519Signature",
+    "verification_method": "KWR1XjiRgyQw0baP0G8Ns8JuIqDhYx5J8anuOnbytCM"
+  },
+  "run": {
+    "attestation": "self",
+    "completed_at": "2026-09-22T22:22:03.726513Z",
+    "seed": "6f55258826c389e0387335e14a32829fb7a314e8d83dfed864e2f8b3ea822cbf",
+    "started_at": "2026-09-22T22:22:03.726513Z"
+  },
+  "spec": "css-refusal-digest",
+  "spec_version": "0.2",
+  "summary": {
+    "attempted": 12,
+    "refused": 12
+  }
+}
