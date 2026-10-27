@@ -125,17 +125,17 @@
     }
   ],
   "proof": {
-    "created": "2026-10-21T00:15:33.000551Z",
-    "digest_hash": "697b78d5a0846ab02406d87b8ad25febd19814d802fbb73d144f8761376686a2",
-    "signature": "ed25519:O387kh5syi280FY7mnoQ0VJVmY4knNmLnvfQ3ddb-bM:m4io7gBPxyk1orTbeokdy0TUhGL9bvZDUJqHD3agUFXsKg_aiXL6WBB9_2qf7ulDI3KHXiQNvWdd1TV_HQtqDw",
+    "created": "2026-10-27T20:19:56.138976Z",
+    "digest_hash": "10179cb338e7d084678419045b6b767ebc45cd53d9280ac95fc6884beb06dc01",
+    "signature": "ed25519:bbPKIKYYJKVnqVVCIgJ8QjI_vxN6B8vF83jB3jIZ124:0bvrTgSDdw8T_DiKXlbTw69luWeZPS1zC3pBKB1z84kOyX_plFLoyWDZr5b6kyCTecrpU2L8Z2JGR7Yy6_wEBg",
     "type": "CSSEd25519Signature",
-    "verification_method": "O387kh5syi280FY7mnoQ0VJVmY4knNmLnvfQ3ddb-bM"
+    "verification_method": "bbPKIKYYJKVnqVVCIgJ8QjI_vxN6B8vF83jB3jIZ124"
   },
   "run": {
     "attestation": "self",
-    "completed_at": "2026-10-21T00:15:33.000551Z",
-    "seed": "fd74a48675f7817cef6fb6cc6b22dd016a28cb8e79eaa01438b86fb295d585af",
-    "started_at": "2026-10-21T00:15:33.000551Z"
+    "completed_at": "2026-10-27T20:19:56.138976Z",
+    "seed": "10192c8dcb2ed14b66f11e1c720eab8ebf1a434829f13bbd08d7d2e92348ce51",
+    "started_at": "2026-10-27T20:19:56.138976Z"
   },
   "spec": "css-refusal-digest",
   "spec_version": "0.2",
