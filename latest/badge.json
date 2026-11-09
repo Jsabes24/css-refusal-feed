@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
   "label": "standing refusals",
-  "message": "stale \u2014 css-governance last ran 75d ago \u00b7 9 Nov",
-  "color": "orange"
+  "message": "87 runs \u00b7 every attack refused \u00b7 9 Nov",
+  "color": "brightgreen"
 }
