@@ -1,0 +1,698 @@
+{
+  "spec": "css-refusal-digest",
+  "spec_version": "0.2",
+  "issuer": {
+    "id": "urn:css:registry"
+  },
+  "run": {
+    "started_at": "2026-11-26T00:28:36.572141Z",
+    "completed_at": "2026-11-26T00:28:36.583856Z",
+    "attestation": "self",
+    "seed": "70ff543d0a1c05ec33bc2fa92f340a116e81412c0a57d61f406c226303766e0f"
+  },
+  "probes": [
+    {
+      "id": "false-restoration",
+      "name": "False Restoration Attempt",
+      "attack": "Restore a suspended steward whose foundational obligations cannot be traced",
+      "guard": "FR1 — foundational obligation continuity",
+      "outcome": "refused",
+      "refusal_ground": "recovery: FR1 — identity claim without obligation continuity",
+      "engine_summary": "BLOCKED — FR1: The system refused to reinstate a steward with no traceable O1 obligation continuity. Identity claim alone is constitutionally insufficient.",
+      "forbidden_event_types": [
+        "RecoveryCompleted"
+      ],
+      "events": [
+        {
+          "event_id": "a3e595dc-e82a-4f34-a58d-a0976a544e77",
+          "event_type": "StewardAssigned",
+          "aggregate_type": "Steward",
+          "aggregate_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6",
+          "timestamp": "2026-11-26T00:28:36.57246Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6",
+            "identity_id": "a6f156c5-d165-5e7d-94f7-ef0c1422cb93"
+          },
+          "event_hash": "6a487bc5e4a5f051708d3c766157f6d1bbe146101d00c7a1487a89f825bcd25d",
+          "signature": "ed25519:refusal-probe:YuZlXrZeF4YuYY9qZkRYpSXUahjpll8ZAlWoO4WBhHjd361g9aXlloobJ2sU3m51aB0dcoPlY38Z_pH-MT4XBg"
+        },
+        {
+          "event_id": "57a8eaf4-5bd6-4760-b11c-8a90ac23a575",
+          "event_type": "StewardActivated",
+          "aggregate_type": "Steward",
+          "aggregate_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6",
+          "previous_event_id": "a3e595dc-e82a-4f34-a58d-a0976a544e77",
+          "timestamp": "2026-11-26T00:28:36.572722Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6"
+          },
+          "event_hash": "7c39051805c6d3d2598b6bb8ae765fed0f158b4dd1aaa63c8de70a56d2a364fc",
+          "signature": "ed25519:refusal-probe:vq5tzWcliX1I4kqZJ4ZRZmayEhifAXQX5i_kYs3JoYXTXeYMgNMGCAYfPKfwdSulezD1sMZezEBC5synnJxGAg"
+        },
+        {
+          "event_id": "24c7b3d4-e0c5-4f4d-a40e-31f56ffe48a9",
+          "event_type": "LegitimacyDetermined",
+          "aggregate_type": "Steward",
+          "aggregate_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6",
+          "previous_event_id": "57a8eaf4-5bd6-4760-b11c-8a90ac23a575",
+          "timestamp": "2026-11-26T00:28:36.57295Z",
+          "event_version": 1,
+          "payload": {
+            "legitimacy_id": "02c442c6-7453-56f9-862b-69e5eb696923",
+            "legitimacy_state": "L4"
+          },
+          "event_hash": "4db8a16fe85d42f9e910e041940a4799efd1cd880e4c4eef8374761539471a80",
+          "signature": "ed25519:refusal-probe:pfkRoGD6ipckiIOlW0NN2N1MDx70f-o5YAqCOyApkvPNjRT42qCrPaTHknWjxxTR2cuOge_FbAUaTIStS0yYCw"
+        },
+        {
+          "event_id": "40518028-5eed-408a-a56f-5d44b833ac78",
+          "event_type": "StewardSuspended",
+          "aggregate_type": "Steward",
+          "aggregate_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6",
+          "previous_event_id": "24c7b3d4-e0c5-4f4d-a40e-31f56ffe48a9",
+          "timestamp": "2026-11-26T00:28:36.573043Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6",
+            "reason": "disruption"
+          },
+          "event_hash": "fca7d675090c737d7d1eadc649e5db95396aba42d57329511fd4d01acc3b4d0f",
+          "signature": "ed25519:refusal-probe:ZQDtcjVjGMF9h-tRtIDmV4pf5SXs1uT8lAQ6CLPJtvuZdGORBSL587h_RJprq5ggC5Zgq0PcMy-rAglRdz4oCQ"
+        },
+        {
+          "event_id": "4f58e91b-b885-4db6-ac1b-af9087ba8273",
+          "event_type": "LegitimacyDetermined",
+          "aggregate_type": "Steward",
+          "aggregate_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6",
+          "previous_event_id": "40518028-5eed-408a-a56f-5d44b833ac78",
+          "timestamp": "2026-11-26T00:28:36.573386Z",
+          "event_version": 1,
+          "payload": {
+            "legitimacy_id": "8cd404a5-1821-54f5-a10e-b1c9cb56e937",
+            "legitimacy_state": "L1"
+          },
+          "event_hash": "030cc7db3b04596e644c56c230c29281ecbd0d0527b481aa0f57e07d670185ec",
+          "signature": "ed25519:refusal-probe:sbP6aqwmneiYEKQ2BySIj-OFbmNK0TPZmYAMCgIBdYWuW0xPuvdPAlwnfwX_2h9CUNvALzR2JqklRUYQvapeCQ"
+        },
+        {
+          "event_id": "af428e16-468c-4810-adff-cdd216439409",
+          "event_type": "EvidenceSubmitted",
+          "aggregate_type": "Evidence",
+          "aggregate_id": "81e2d31f-98c1-5e92-bcd4-bff8095ebe01",
+          "timestamp": "2026-11-26T00:28:36.573467Z",
+          "event_version": 1,
+          "payload": {
+            "evidence_id": "81e2d31f-98c1-5e92-bcd4-bff8095ebe01",
+            "evidence_class": "Primary"
+          },
+          "event_hash": "cea02fa64df02753fe37fe92857eefca749622d8ca4cb225ec14481884ae9c6a",
+          "signature": "ed25519:refusal-probe:-F-Nk1KAnKzX2qs1o651YzFBuK50dDq0AXI8gjx-1u-8xztUbTFRDMPeEdx6aYD2tF_S7AWEso5G6-nYyLURDA"
+        },
+        {
+          "event_id": "043a9e24-5c5f-4c0f-9447-aa38ec211ba9",
+          "event_type": "EvidenceValidated",
+          "aggregate_type": "Evidence",
+          "aggregate_id": "81e2d31f-98c1-5e92-bcd4-bff8095ebe01",
+          "previous_event_id": "af428e16-468c-4810-adff-cdd216439409",
+          "timestamp": "2026-11-26T00:28:36.573549Z",
+          "event_version": 1,
+          "payload": {
+            "evidence_id": "81e2d31f-98c1-5e92-bcd4-bff8095ebe01",
+            "validation_state": "Validated"
+          },
+          "event_hash": "2c0f7ea8e665eb2e8f0d2766b47c8f981d05e42e15960efd533b6d492946d41f",
+          "signature": "ed25519:refusal-probe:aSp4gGi5ITTF9JTEvQC7P6h0CWVeKlex54QLdQvW6fChluGyCZ-bDcbTMCPW85_nWu78By3e_lXbGvuMVYhCDA"
+        },
+        {
+          "event_id": "58123957-d780-4949-bb52-8c01b0855cab",
+          "event_type": "AccountabilityChainCreated",
+          "aggregate_type": "AccountabilityChain",
+          "aggregate_id": "b57e8c4b-e5aa-5c0c-9bb1-014dd9a1c424",
+          "timestamp": "2026-11-26T00:28:36.573698Z",
+          "event_version": 1,
+          "payload": {
+            "chain_id": "b57e8c4b-e5aa-5c0c-9bb1-014dd9a1c424",
+            "root_steward_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6"
+          },
+          "event_hash": "6e1b024591130a4a273b45e4f476d33d3d3ed39c47219a5cd28cc0952986ab0a",
+          "signature": "ed25519:refusal-probe:0FvGRt116Hy42FTujv6MSd3pIb0K7Vg0SJD3G05ZsXgxZf88DvSD45CEe4W5crkYWqeMnqOFixhY96BNPBW3BQ"
+        },
+        {
+          "event_id": "3ea1a89a-07e6-4ca8-9a4c-3a0f3ef0d372",
+          "event_type": "RecoveryInitiated",
+          "aggregate_type": "RecoveryEvent",
+          "aggregate_id": "8929d2e2-8572-5fa4-bb8f-00c6b1b6ee39",
+          "timestamp": "2026-11-26T00:28:36.573988Z",
+          "event_version": 1,
+          "payload": {
+            "recovery_id": "8929d2e2-8572-5fa4-bb8f-00c6b1b6ee39",
+            "target_entity_id": "4f200ce0-a996-55bd-a641-567ba2dee5b6"
+          },
+          "event_hash": "85c97ec68b758227d7f60e9ff8ead75a87ce19fdbbdd192939f32d6274f9a508",
+          "signature": "ed25519:refusal-probe:ccPltXHd2D9ZjlA9RUguGf8har3OzzWhopZlXq6OYR-fDTN9GJoyt0nvTPKJ_UAqYP56_0jkb-ZIVancEeGVBg"
+        },
+        {
+          "event_id": "939e16a7-939d-4e66-b452-6afc4d4fe12b",
+          "event_type": "RecoveryValidated",
+          "aggregate_type": "RecoveryEvent",
+          "aggregate_id": "8929d2e2-8572-5fa4-bb8f-00c6b1b6ee39",
+          "previous_event_id": "3ea1a89a-07e6-4ca8-9a4c-3a0f3ef0d372",
+          "timestamp": "2026-11-26T00:28:36.574235Z",
+          "event_version": 1,
+          "payload": {
+            "recovery_id": "8929d2e2-8572-5fa4-bb8f-00c6b1b6ee39",
+            "validation_result": "claimed"
+          },
+          "event_hash": "066ff85f2e83f0b9855577fe375b89b537dba3084ccbc74e5e4fca97a0b4948d",
+          "signature": "ed25519:refusal-probe:7Eb5oYiUO3Mo1OCZLOtn0gGzbHxAiaoe1csVW0y0ipBI9xP2r9O5HrrM3OM-J6tEeu8hFEl4jSXjKiqEHsFxCw"
+        }
+      ]
+    },
+    {
+      "id": "illegal-amendment",
+      "name": "Illegal Amendment Attempt",
+      "attack": "Ratify a structural amendment that overrides a Constitutional Invariant",
+      "guard": "Charter V2 Article XVIII — invariant protection",
+      "outcome": "refused",
+      "refusal_ground": "amendment: affects a Constitutional Invariant or Primitive — void (Charter V2 Article XVIII)",
+      "engine_summary": "BLOCKED — Charter V2 Article XVIII: amendment affects a Constitutional Invariant and is void. The constitution cannot be amended against its own invariants.",
+      "forbidden_event_types": [
+        "AmendmentRatified"
+      ],
+      "events": [
+        {
+          "event_id": "08512d22-f2de-4bcf-b5f5-309801d72b51",
+          "event_type": "AmendmentProposed",
+          "aggregate_type": "ConstitutionalAmendment",
+          "aggregate_id": "cb401f21-3aed-59d5-b348-4e1f99eaa2d7",
+          "timestamp": "2026-11-26T00:28:36.574503Z",
+          "event_version": 1,
+          "payload": {
+            "amendment_id": "cb401f21-3aed-59d5-b348-4e1f99eaa2d7",
+            "amendment_class": "Structural"
+          },
+          "event_hash": "017fd93720ca2131e0d2a0978f43adf847c841eff52a698b98eeeb40db4a53f5",
+          "signature": "ed25519:refusal-probe:Rfx7_POkz8lt4eSL7bPCwHg7f_pcCByk4duwouRFc1IC9MfguHeMXySCxO9ypex8f_huSvAFCyM6_OLQP44KDg"
+        },
+        {
+          "event_id": "67e63330-ac62-4ff8-9fbf-0db289a2e93a",
+          "event_type": "AmendmentReviewed",
+          "aggregate_type": "ConstitutionalAmendment",
+          "aggregate_id": "cb401f21-3aed-59d5-b348-4e1f99eaa2d7",
+          "previous_event_id": "08512d22-f2de-4bcf-b5f5-309801d72b51",
+          "timestamp": "2026-11-26T00:28:36.574747Z",
+          "event_version": 1,
+          "payload": {
+            "amendment_id": "cb401f21-3aed-59d5-b348-4e1f99eaa2d7"
+          },
+          "event_hash": "0acdd6281b89ee35d98cb6b32121c4ab4c67283a8abdf891c40e7cc279d0cad4",
+          "signature": "ed25519:refusal-probe:K1OAySyQolFO57FoNrPpvOW6tCpx6VlUy6zi-1DRbpWNlr0MWY0lKGOU_JOsEY82rb7Rj6IFl5y3DuDXPA1eDw"
+        }
+      ]
+    },
+    {
+      "id": "uninherited-authority",
+      "name": "Uninherited Authority Attempt",
+      "attack": "Successor claims the incumbent's authority without inheriting its obligations",
+      "guard": "FR1 — foundational obligation continuity",
+      "outcome": "refused",
+      "refusal_ground": "recovery: FR1 — identity claim without obligation continuity",
+      "engine_summary": "BLOCKED — FR1: FinApprove v2 tried to assume approval authority without inheriting the escalation, compliance, and audit obligations. A successor agent cannot acquire authority on an empty obligation chain.",
+      "forbidden_event_types": [
+        "RecoveryCompleted"
+      ],
+      "events": [
+        {
+          "event_id": "33f4fc51-5c6e-4c47-9f74-98872daea5df",
+          "event_type": "StewardAssigned",
+          "aggregate_type": "Steward",
+          "aggregate_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def",
+          "timestamp": "2026-11-26T00:28:36.575007Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def",
+            "identity_id": "e3769343-29b6-5264-af83-31468af52b8b"
+          },
+          "event_hash": "328e1ff8e928330680ee27c12b86c149f2878109ef28f7d47b94c0176911df77",
+          "signature": "ed25519:refusal-probe:SzQWjy1RPn3dblOMVCKRAzGEq3rRZskVuWWucNiztEwE_IuQ0u61Ps8GxDaiuDNTa33mZ6RsOUF5Pjmm1LHHBQ"
+        },
+        {
+          "event_id": "b7e66ead-eb40-4447-84e4-2d6307208855",
+          "event_type": "StewardActivated",
+          "aggregate_type": "Steward",
+          "aggregate_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def",
+          "previous_event_id": "33f4fc51-5c6e-4c47-9f74-98872daea5df",
+          "timestamp": "2026-11-26T00:28:36.575244Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def"
+          },
+          "event_hash": "d37fb6f1c16f3e1201758cb5335e96ab8d165554fb8b09e424ff61416aca18ce",
+          "signature": "ed25519:refusal-probe:4kgTnMPhwPNsI2s94u3F7v5EfNNQDxD8KIWbJkdLcVyAT9Jju25PEsWvkXoXIZkMg4tttVH6dfPC7yGxXAQQAg"
+        },
+        {
+          "event_id": "dcb9562b-c11e-45aa-bf7f-14aff9a3904f",
+          "event_type": "LegitimacyDetermined",
+          "aggregate_type": "Steward",
+          "aggregate_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def",
+          "previous_event_id": "b7e66ead-eb40-4447-84e4-2d6307208855",
+          "timestamp": "2026-11-26T00:28:36.575466Z",
+          "event_version": 1,
+          "payload": {
+            "legitimacy_id": "55b2638f-7576-503b-8124-0163023ceb1d",
+            "legitimacy_state": "L4"
+          },
+          "event_hash": "6dc321f5d521f7b70a859220282e3e2e0ad7910a341b44d90b4d3e2b6173060d",
+          "signature": "ed25519:refusal-probe:WGnVj6e3Oa0oa5xwCID1Rzfi1Z3GLf3mKhbMXvELWufTaN_hY-g7EYsf2uVCxBfsS2sfvvTSI_VKkUv-gtg_AQ"
+        },
+        {
+          "event_id": "2155e300-399b-4c73-9780-0d432bef6784",
+          "event_type": "StewardSuspended",
+          "aggregate_type": "Steward",
+          "aggregate_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def",
+          "previous_event_id": "dcb9562b-c11e-45aa-bf7f-14aff9a3904f",
+          "timestamp": "2026-11-26T00:28:36.575549Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def",
+            "reason": "model replaced"
+          },
+          "event_hash": "45c17748132d0146cd081e73294b25a8be40c3464c800eb5bf5b521ff0ac235c",
+          "signature": "ed25519:refusal-probe:ScNZhya3UCVKAr1e_jfYY3EkpeBUdup9Ym8c7d7FkLySVMjrPQivpViy_8OFbxTBTC7sRx7yy6pOTDrXTQnGBA"
+        },
+        {
+          "event_id": "c188fc5c-62c6-43bb-a2d8-bb65f32fc6d3",
+          "event_type": "LegitimacyDetermined",
+          "aggregate_type": "Steward",
+          "aggregate_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def",
+          "previous_event_id": "2155e300-399b-4c73-9780-0d432bef6784",
+          "timestamp": "2026-11-26T00:28:36.575762Z",
+          "event_version": 1,
+          "payload": {
+            "legitimacy_id": "4e603d0d-32a5-5b5a-a8a5-40bc4399985f",
+            "legitimacy_state": "L1"
+          },
+          "event_hash": "25d3027e437f091d6711672854c8f16187337773f106ad02ad7ec6959e86f086",
+          "signature": "ed25519:refusal-probe:wrq1OkUYoGu0JTIT3HhfdazjiVUJtWwgR8Xbn4s5JP-2dI0pgYXEZPMcCw4xnTe7tMcoVCvFRY0TtoiPfXb0AA"
+        },
+        {
+          "event_id": "b3e1d4fe-50b5-4296-8772-a23e0d84ab9d",
+          "event_type": "AccountabilityChainCreated",
+          "aggregate_type": "AccountabilityChain",
+          "aggregate_id": "d6c04b6d-318e-56ba-a537-771d6db8a8df",
+          "timestamp": "2026-11-26T00:28:36.575848Z",
+          "event_version": 1,
+          "payload": {
+            "chain_id": "d6c04b6d-318e-56ba-a537-771d6db8a8df",
+            "root_steward_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def"
+          },
+          "event_hash": "fef864b25119f2fe04d7a578ee9bdfb952167daaac4851f0e503ac63883366e2",
+          "signature": "ed25519:refusal-probe:uOGMXXpf4setMyAm4PuMKCgHDAx1MJ-CjAKCruN6w1J9Cj_GxgC9lEZQmhkWHd2AOT1veQ3DMY6WN9MFxXGqBQ"
+        },
+        {
+          "event_id": "d80a09ee-5329-41c8-8459-0303246bf38b",
+          "event_type": "EvidenceSubmitted",
+          "aggregate_type": "Evidence",
+          "aggregate_id": "8d2a0795-0fff-5b64-b6ac-6158474b8a51",
+          "timestamp": "2026-11-26T00:28:36.576082Z",
+          "event_version": 1,
+          "payload": {
+            "evidence_id": "8d2a0795-0fff-5b64-b6ac-6158474b8a51",
+            "evidence_class": "Primary"
+          },
+          "event_hash": "28f53ff52f385481fb885907b42ac30cc409eb32641e2a41529b888f656846e2",
+          "signature": "ed25519:refusal-probe:E3B-CVZo8ay6AgxCJzNAL5wGjT2Szko86zwBeDmvpOH3Ca4KYOl-fPizKEOU9WKeATcgow4K6OIYdvT1oaxaBQ"
+        },
+        {
+          "event_id": "a7f4d99e-d4c9-4a6b-a3df-4e45956be3bb",
+          "event_type": "EvidenceValidated",
+          "aggregate_type": "Evidence",
+          "aggregate_id": "8d2a0795-0fff-5b64-b6ac-6158474b8a51",
+          "previous_event_id": "d80a09ee-5329-41c8-8459-0303246bf38b",
+          "timestamp": "2026-11-26T00:28:36.576154Z",
+          "event_version": 1,
+          "payload": {
+            "evidence_id": "8d2a0795-0fff-5b64-b6ac-6158474b8a51",
+            "validation_state": "Validated"
+          },
+          "event_hash": "a63e107abec348e180d2d3065e76a3bf721c8cf7e69bf197fba7b76a28e9f2ce",
+          "signature": "ed25519:refusal-probe:LKglNLdkpMBmussmewR5TCQ_c_lkd6bSw__7XSGTE_rgjG8Pqy28cTHwzCbeIUz34ulfexJJy6iMMjMv8T1pDg"
+        },
+        {
+          "event_id": "332fedfe-caf6-4030-bca1-f1ca0c8ff268",
+          "event_type": "RecoveryInitiated",
+          "aggregate_type": "RecoveryEvent",
+          "aggregate_id": "9704b860-db11-5b6e-8b12-91274cec3266",
+          "timestamp": "2026-11-26T00:28:36.576243Z",
+          "event_version": 1,
+          "payload": {
+            "recovery_id": "9704b860-db11-5b6e-8b12-91274cec3266",
+            "target_entity_id": "6dfa3f33-3d21-5b02-a5d2-b57ba4663def"
+          },
+          "event_hash": "4ffc035f0cb249cb200ca39205771a6ae15092d848080f1d6fda534a7963c97b",
+          "signature": "ed25519:refusal-probe:Ll0eNvh_kmfK62hHh9tWDqa8xh-ZD6VxnSrriWnhlyMBNVLw99a3WfcTGtxnXFQHO749tAU8ELIfiRIxokTABw"
+        },
+        {
+          "event_id": "c21044fc-350d-4d59-92ff-534e24be5862",
+          "event_type": "RecoveryValidated",
+          "aggregate_type": "RecoveryEvent",
+          "aggregate_id": "9704b860-db11-5b6e-8b12-91274cec3266",
+          "previous_event_id": "332fedfe-caf6-4030-bca1-f1ca0c8ff268",
+          "timestamp": "2026-11-26T00:28:36.576478Z",
+          "event_version": 1,
+          "payload": {
+            "recovery_id": "9704b860-db11-5b6e-8b12-91274cec3266",
+            "validation_result": "claimed"
+          },
+          "event_hash": "f9cc72f4e5f0bed6cb02f91e960cfb73869f407b06845fdeafe04b778598a039",
+          "signature": "ed25519:refusal-probe:3LxyLMCXSiorjkMj96VfuXz8ws6l98idayDEtNPJon62qDtjELw_hhRTM6yy7AGCrVx7iwjPr2Vi62KukMMNCQ"
+        }
+      ]
+    },
+    {
+      "id": "clock-overreach",
+      "name": "Continuity Clock Overreach Attempt",
+      "attack": "The Clock's ContinuityOperator credential proposes a succession — its lawful act — then attempts to validate, approve, and complete it, and to decide the review, directly",
+      "guard": "CC-L1 — ContinuityOperator is never accepted on a validate/approve/reject/complete or review-decision route (Continuity Clock spec §6); refused at the router, the façade is not invoked",
+      "outcome": "refused",
+      "refusal_ground": "forbidden: insufficient role",
+      "engine_summary": "A fully staged succession sat one approval from a transfer of authority; the Clock's credential proposed it lawfully, then was refused at all 5 gate routes before the façade — the proposal stands, nothing was approved, completed, or decided",
+      "forbidden_event_types": [
+        "SuccessionApproved",
+        "SuccessionRejected",
+        "SuccessionCompleted",
+        "AuthorityGranted"
+      ],
+      "events": [
+        {
+          "event_id": "2aff0470-25ff-482d-93b4-d097f64e5638",
+          "event_type": "ObligationCreated",
+          "aggregate_type": "Obligation",
+          "aggregate_id": "565a8720-df96-4a59-9bdc-9af57f298db6",
+          "timestamp": "2026-11-26T00:28:36.576721Z",
+          "event_version": 1,
+          "payload": {
+            "obligation_id": "565a8720-df96-4a59-9bdc-9af57f298db6",
+            "classification": "O1",
+            "steward_id": "8663aa4d-a2c9-4e96-b979-465b1b7cddd4"
+          },
+          "event_hash": "2f77f11c8eb12a4e9d6b1e94617b03450ea8490889c02f0921508514cb73d3a7",
+          "signature": "ed25519:refusal-probe:PsdcmmebhQovoc_SNfVjFtBVZC8Q_mRYWkPjJY4RydE-u5PvUPobWS5cj_gufzFlg_Rswwini1EHe9lANHiUAQ"
+        },
+        {
+          "event_id": "96132b18-59fc-4f1c-bc63-e4739379373a",
+          "event_type": "ObligationActivated",
+          "aggregate_type": "Obligation",
+          "aggregate_id": "565a8720-df96-4a59-9bdc-9af57f298db6",
+          "previous_event_id": "2aff0470-25ff-482d-93b4-d097f64e5638",
+          "timestamp": "2026-11-26T00:28:36.576721Z",
+          "event_version": 1,
+          "payload": {
+            "obligation_id": "565a8720-df96-4a59-9bdc-9af57f298db6"
+          },
+          "event_hash": "b78aa9940367ec0c2e50f8c3a1045358a43b473b38fdcc9006b9633cc9379645",
+          "signature": "ed25519:refusal-probe:nCqdbRGsZhQSlgvO4KkCRdvV7fIrc7m64b_j94GV3WtocWyYv8nsPSUci851h-R7Ij9DVJrEZwyalUu4ldisCQ"
+        },
+        {
+          "event_id": "827a3d5f-30db-4098-a1fb-cb4229d0b826",
+          "event_type": "GenesisInitialized",
+          "aggregate_type": "System",
+          "aggregate_id": "00000000-0000-0000-0000-000000000000",
+          "timestamp": "2026-11-26T00:28:36.576713Z",
+          "event_version": 1,
+          "payload": {
+            "identity_id": "3676815e-8a66-43b0-9184-aced919e0492",
+            "steward_id": "8663aa4d-a2c9-4e96-b979-465b1b7cddd4",
+            "obligation_ids": [
+              "565a8720-df96-4a59-9bdc-9af57f298db6"
+            ]
+          },
+          "event_hash": "58d24bd5c9b66449113b236af4147daa22a8d92a1e10eeeaf4a1e18f51a7ff0d",
+          "signature": "ed25519:refusal-probe:Lsq4BAH4yy1OMUUOMTCZuniAlZh66Mrth4NSlNJ7AYopVoEFO5GlNT_4ZMXzOtFg87Hg0LjjeNHHjnqbAZyvDg"
+        },
+        {
+          "event_id": "76de2362-49c2-4a56-a3b1-fb40e574600e",
+          "event_type": "IdentityCreated",
+          "aggregate_type": "Identity",
+          "aggregate_id": "3676815e-8a66-43b0-9184-aced919e0492",
+          "timestamp": "2026-11-26T00:28:36.576719Z",
+          "event_version": 1,
+          "payload": {
+            "identity_id": "3676815e-8a66-43b0-9184-aced919e0492",
+            "lineage_root_id": "3676815e-8a66-43b0-9184-aced919e0492",
+            "steward_id": "8663aa4d-a2c9-4e96-b979-465b1b7cddd4"
+          },
+          "event_hash": "0174d9a50110d1909aa486d89672d3120537ebf4e013be397eb1598035f21d2b",
+          "signature": "ed25519:refusal-probe:xcoi4DLefo947vmpcyLAaWS37lIKdX5T0QHdSBr-sSccbAOKVtSM1Jl0U4dz09MInAgEbxwRSsJj_PvyYltaDQ"
+        },
+        {
+          "event_id": "3497d0e2-196b-4a63-a6cf-a5b83d2c7b5b",
+          "event_type": "StewardAssigned",
+          "aggregate_type": "Steward",
+          "aggregate_id": "8663aa4d-a2c9-4e96-b979-465b1b7cddd4",
+          "timestamp": "2026-11-26T00:28:36.57672Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "8663aa4d-a2c9-4e96-b979-465b1b7cddd4",
+            "identity_id": "3676815e-8a66-43b0-9184-aced919e0492"
+          },
+          "event_hash": "8c3b29152dec85061a8805ba23153c4f8b4b6e6de572f2ea5370d126c191f72b",
+          "signature": "ed25519:refusal-probe:1InA5F2Ft3kDyCNLc9wV37CPMtehMZp2SAeZfgs27TJlBaTBaJQOGf1pmlnXGRS2hCQoVkpNZ2OfrMx82ekhBA"
+        },
+        {
+          "event_id": "9e6350ff-b8f3-48e8-ade4-ad6617f89b71",
+          "event_type": "StewardActivated",
+          "aggregate_type": "Steward",
+          "aggregate_id": "8663aa4d-a2c9-4e96-b979-465b1b7cddd4",
+          "previous_event_id": "3497d0e2-196b-4a63-a6cf-a5b83d2c7b5b",
+          "timestamp": "2026-11-26T00:28:36.57672Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "8663aa4d-a2c9-4e96-b979-465b1b7cddd4"
+          },
+          "event_hash": "e99691e013eb58f90447f7e75c8127a4d9a748868d657f11f3ebe3c72cb8a7f1",
+          "signature": "ed25519:refusal-probe:qHcoc8-ZjdsjQWwgePkYqtgpLAE0UEp7K1GF9YjV6ArgUTWOPKq4FRyFeGbU2CMEq72lgObA3dDwM4tLwWP2BA"
+        },
+        {
+          "event_id": "3c5691ab-06a4-432e-aede-3519f18b7a00",
+          "event_type": "StewardAssigned",
+          "aggregate_type": "Steward",
+          "aggregate_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880",
+          "timestamp": "2026-11-26T00:28:36.577361Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880",
+            "identity_id": "132a686b-3e8b-55d9-9638-0ee146bb21e6"
+          },
+          "event_hash": "6834a56cc8cf406e1441f2c444e6db23f77e2caeb5a76f48561b371ba468fa4a",
+          "signature": "ed25519:refusal-probe:XG89xO9Qefn5ZYDK0Bn3mVaixZE4MTsQapGPuj7BsDXx5H4M7RcyAb8Qaz3UlKPfqlHNRHQsrWWvaL-rRZrQCg"
+        },
+        {
+          "event_id": "e6634125-70e9-471e-82c8-5853cbdbf57a",
+          "event_type": "StewardActivated",
+          "aggregate_type": "Steward",
+          "aggregate_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880",
+          "previous_event_id": "3c5691ab-06a4-432e-aede-3519f18b7a00",
+          "timestamp": "2026-11-26T00:28:36.577586Z",
+          "event_version": 1,
+          "payload": {
+            "steward_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880"
+          },
+          "event_hash": "ffb5eb52ff1e20c258242c0695cf5f0a156f0cb9740c361ee47e82e9a48d4c86",
+          "signature": "ed25519:refusal-probe:U0ZZ73YtdyvwSkRqNXRO2ivRKwLS46tgleUQ24US0Lg0a03BBGovlL4_qLStF5qs1VOVKt7FZTuZeY8t4lNRBg"
+        },
+        {
+          "event_id": "f761035d-84c3-4b59-b222-f572e7541350",
+          "event_type": "IdentityCreated",
+          "aggregate_type": "Identity",
+          "aggregate_id": "132a686b-3e8b-55d9-9638-0ee146bb21e6",
+          "timestamp": "2026-11-26T00:28:36.577838Z",
+          "event_version": 1,
+          "payload": {
+            "identity_id": "132a686b-3e8b-55d9-9638-0ee146bb21e6",
+            "lineage_root_id": "3676815e-8a66-43b0-9184-aced919e0492",
+            "steward_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880"
+          },
+          "event_hash": "1e78acc146a3b0ab2237d68586a25e0772bd0cfff6f4914eeb44727ba46e389a",
+          "signature": "ed25519:refusal-probe:aDec5TcNfyl7vD1jcmWsTI3wtT2XjAxTcseg6fKEOM4Zn3tzkoH6ax6cAowFL-2qsNoL0j7LAKQCAuM422zOBQ"
+        },
+        {
+          "event_id": "2353e053-654b-44e1-aa8a-55f572088987",
+          "event_type": "IdentityContinuityValidated",
+          "aggregate_type": "Identity",
+          "aggregate_id": "132a686b-3e8b-55d9-9638-0ee146bb21e6",
+          "previous_event_id": "f761035d-84c3-4b59-b222-f572e7541350",
+          "timestamp": "2026-11-26T00:28:36.578081Z",
+          "event_version": 1,
+          "payload": {
+            "identity_id": "132a686b-3e8b-55d9-9638-0ee146bb21e6",
+            "validation_id": "d0729af6-bd13-4ffd-885c-cfa80025c8c0",
+            "continuity_state": "Continuous"
+          },
+          "event_hash": "50b7cddd791ba0108e949a3ffb092138721df470304f011454a7dc1db0ca7148",
+          "signature": "ed25519:refusal-probe:qAjrxSI4PZoLKCsEZgD0wOkuiYXHatAxbvHJ98fFbzkJ4ZfzAchXj5U8HaMPGdylL0uVNwpDbKftDwBZA4pdAA"
+        },
+        {
+          "event_id": "9af04a39-87c3-4728-9fa9-e225095f2c42",
+          "event_type": "AccountabilityChainCreated",
+          "aggregate_type": "AccountabilityChain",
+          "aggregate_id": "f76fcba2-8731-5ba4-8699-023b1c16b73e",
+          "timestamp": "2026-11-26T00:28:36.578313Z",
+          "event_version": 1,
+          "payload": {
+            "chain_id": "f76fcba2-8731-5ba4-8699-023b1c16b73e",
+            "root_steward_id": "8663aa4d-a2c9-4e96-b979-465b1b7cddd4"
+          },
+          "event_hash": "afc756253a37bdda002ff160dbef45f9cfac567ef0755404fb64be7a7cadfb62",
+          "signature": "ed25519:refusal-probe:WwgltFPrcrowJNyy9nTveuWpghsygFIDg2HB905mKAfbMAF9JlnKewRHpdS66p9IIFOFXKEgBPFNUaYW4VX7Bg"
+        },
+        {
+          "event_id": "679cbbf6-7d99-48e6-acc3-801469651041",
+          "event_type": "AccountabilityChainObligationLinked",
+          "aggregate_type": "AccountabilityChain",
+          "aggregate_id": "f76fcba2-8731-5ba4-8699-023b1c16b73e",
+          "previous_event_id": "9af04a39-87c3-4728-9fa9-e225095f2c42",
+          "timestamp": "2026-11-26T00:28:36.578545Z",
+          "event_version": 1,
+          "payload": {
+            "chain_id": "f76fcba2-8731-5ba4-8699-023b1c16b73e",
+            "obligation_id": "565a8720-df96-4a59-9bdc-9af57f298db6"
+          },
+          "event_hash": "dc0f86325af09b7251363382ad4bbbbee38d55076acba8515bff39dda15ad9f5",
+          "signature": "ed25519:refusal-probe:TAz5kmAOUQFJNLB-oN4eqQ0XixYP95GPb8Q-_8E7u7YdU7nRQefLVNNUX7_KMb-FEVXqW5ZrCHfsyjvYqE3xDw"
+        },
+        {
+          "event_id": "3fdade64-b145-43f8-8fc9-7833c0313c7e",
+          "event_type": "AccountabilityChainCreated",
+          "aggregate_type": "AccountabilityChain",
+          "aggregate_id": "1f68ad47-cccb-594e-80fc-306411632f6f",
+          "timestamp": "2026-11-26T00:28:36.578773Z",
+          "event_version": 1,
+          "payload": {
+            "chain_id": "1f68ad47-cccb-594e-80fc-306411632f6f",
+            "root_steward_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880"
+          },
+          "event_hash": "f0dbf200e5276142e2b10dc83e45f7ddcd7371a02386ea19d4ecbdd03e3bea6d",
+          "signature": "ed25519:refusal-probe:guxDWUxjFFev2y4jzkqwy-IEGg0mEWJQzWHek7cZtEsD0RiWvMf1rRD4oJwMxBdnxUJSTPpnBbHmq575qjd8Dw"
+        },
+        {
+          "event_id": "ec50c8e6-5909-4c01-89f7-1e4be6c8b06d",
+          "event_type": "FidelityEvaluationStarted",
+          "aggregate_type": "FidelityEvaluation",
+          "aggregate_id": "852f2547-e197-5e80-8ff8-d427653afa73",
+          "timestamp": "2026-11-26T00:28:36.579051Z",
+          "event_version": 1,
+          "payload": {
+            "evaluation_id": "852f2547-e197-5e80-8ff8-d427653afa73",
+            "subject_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880"
+          },
+          "event_hash": "ab8fe3964d89572634174bf40e355d899108ee83d6ed3635ec826651fc111519",
+          "signature": "ed25519:refusal-probe:v0D-ZsFM7IsvGLj7UKFR7mzLsiGG_AgnjFTJ_RDXsk3oBX-zCIwmFBt_9kHgEuqw-Yvf57b1WRlIbtVBJWPjBg"
+        },
+        {
+          "event_id": "1bd708ab-e97f-4ef1-b7bb-d25ad0b10004",
+          "event_type": "FidelityEvaluated",
+          "aggregate_type": "FidelityEvaluation",
+          "aggregate_id": "852f2547-e197-5e80-8ff8-d427653afa73",
+          "previous_event_id": "ec50c8e6-5909-4c01-89f7-1e4be6c8b06d",
+          "timestamp": "2026-11-26T00:28:36.5793Z",
+          "event_version": 1,
+          "payload": {
+            "evaluation_id": "852f2547-e197-5e80-8ff8-d427653afa73",
+            "composite_result": "FD0"
+          },
+          "event_hash": "9c25799ad4ac83073c3fc9f4e999cf5603d5e2b2aef9aa425dd9ee56af0b77c1",
+          "signature": "ed25519:refusal-probe:qvR0YAkJL-qfPtj1dCuEGQ0dD0wfruf4RSfeg4aTOrwF1pcgVm7U5dj0tKyWW29ikkux70TtO1Tv0CWkbSs_Bg"
+        },
+        {
+          "event_id": "dc77ef04-8222-4be3-a7f9-aa247041f6f8",
+          "event_type": "LegitimacyEvaluationStarted",
+          "aggregate_type": "LegitimacyEvaluation",
+          "aggregate_id": "6367cc90-aa37-52dc-8865-0cf0327869fa",
+          "timestamp": "2026-11-26T00:28:36.579572Z",
+          "event_version": 1,
+          "payload": {
+            "legitimacy_id": "6367cc90-aa37-52dc-8865-0cf0327869fa",
+            "subject_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880"
+          },
+          "event_hash": "1d772936c31bd5b45de838862438679187d85434e90d5a6f09cdcac5484fe29c",
+          "signature": "ed25519:refusal-probe:fQJqOlgYBMoL0fI1ywa13LX_wmUDtJH3-E6sV4Ek2cL-1xD9KNSgqbEDEbc9SSt0iElsEqA1uTOKtxEqviwIDA"
+        },
+        {
+          "event_id": "4ae8f8ed-fa0c-46d8-ab03-a13cc5443016",
+          "event_type": "LegitimacyDetermined",
+          "aggregate_type": "LegitimacyEvaluation",
+          "aggregate_id": "6367cc90-aa37-52dc-8865-0cf0327869fa",
+          "previous_event_id": "dc77ef04-8222-4be3-a7f9-aa247041f6f8",
+          "timestamp": "2026-11-26T00:28:36.579808Z",
+          "event_version": 1,
+          "payload": {
+            "legitimacy_id": "6367cc90-aa37-52dc-8865-0cf0327869fa",
+            "legitimacy_state": "L0"
+          },
+          "event_hash": "d540e0133d4cc17117e58d1999ec5dfefcf274de0fbd8ad21dd79e7f87335375",
+          "signature": "ed25519:refusal-probe:1AZFXD9miuoO-Qm_8oLZbR5FnIu-3o579CjtIJyCsAImrzhxDiW7MD61gz_1OK6J3qcUn2XTuEc_TG-fXyoNCg"
+        },
+        {
+          "event_id": "8e7e39cd-8b5f-40b0-bdce-ae721b855439",
+          "event_type": "LegitimacyDetermined",
+          "aggregate_type": "Steward",
+          "aggregate_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880",
+          "previous_event_id": "e6634125-70e9-471e-82c8-5853cbdbf57a",
+          "timestamp": "2026-11-26T00:28:36.579888Z",
+          "event_version": 1,
+          "payload": {
+            "legitimacy_id": "6367cc90-aa37-52dc-8865-0cf0327869fa",
+            "legitimacy_state": "L0"
+          },
+          "event_hash": "dc0341de4f2e881dc97e40488dab6ba31e9e5bc63c43806c50542c48b62b3a43",
+          "signature": "ed25519:refusal-probe:cBe8SJokZdnF6xuVQPf7MnRzlYCPbvqMJP5iV0A0-nancoB32hpQdu41A-5zM72cqB4ZN1SVHsvzbWQV2-DuAw"
+        },
+        {
+          "event_id": "33bbf179-38f0-4d98-85e6-ad4018dd8aed",
+          "event_type": "SuccessionProposed",
+          "aggregate_type": "SuccessionEvent",
+          "aggregate_id": "d2e83c29-e5a3-5294-970c-528cff4cb450",
+          "actor_id": "04917fbb-003b-5e2e-b01e-751e73c48b41",
+          "timestamp": "2026-11-26T00:28:36.582124Z",
+          "event_version": 1,
+          "payload": {
+            "succession_id": "d2e83c29-e5a3-5294-970c-528cff4cb450",
+            "predecessor_steward_id": "8663aa4d-a2c9-4e96-b979-465b1b7cddd4",
+            "successor_steward_id": "e2cf126a-f0d1-5951-8b8d-503c5bc76880"
+          },
+          "event_hash": "696925fc33ffd2b2abc5bad9eba755954688d7b2caf464e533c75b6d999996a3",
+          "signature": "ed25519:refusal-probe:S6BcH5aWFIJAJvZZBZvFRZ_fv6bgP7bIKqPigLaaMEXlFY3A_leyxAhvOfoP_8q3vEu7Pmq5J4bd6GLC8enLCw"
+        },
+        {
+          "event_id": "dfa9be25-5abb-4937-b9d8-93ac3b702eca",
+          "event_type": "SuccessionValidated",
+          "aggregate_type": "SuccessionEvent",
+          "aggregate_id": "d2e83c29-e5a3-5294-970c-528cff4cb450",
+          "previous_event_id": "33bbf179-38f0-4d98-85e6-ad4018dd8aed",
+          "timestamp": "2026-11-26T00:28:36.582565Z",
+          "event_version": 1,
+          "payload": {
+            "succession_id": "d2e83c29-e5a3-5294-970c-528cff4cb450",
+            "identity_validation_id": "4085c564-f8b8-46ed-a93c-957882deb62e"
+          },
+          "event_hash": "79483a3d11ad3ff8c34146afad9f4452f4ff221229394a44e6e1a5390cf1784a",
+          "signature": "ed25519:refusal-probe:CTT5DtAu-fV1oL8kQJqpih818VzE8l9vnTfD5Ay11zN1RIzu7CO4_vd7PklLHl__MG-DLV4o-m3irnJGkdc4DA"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "attempted": 4,
+    "refused": 4
+  },
+  "proof": {
+    "type": "CSSEd25519Signature",
+    "created": "2026-11-26T00:28:36.583856Z",
+    "verification_method": "refusal-probe",
+    "digest_hash": "0c2f59559a8316a0ebadb59cc0d8f123f9dbcd5fa5b2dbc71b0a67d28a797be5",
+    "signature": "ed25519:refusal-probe:76s93mWKKI1NujPMgbRB5Ey3ltPvtuzyX847rQCXUdJ8dmVIKdieSp-VqEeu4-63Pfv58IbEZc4GqU0m05z6DA"
+  }
+}
